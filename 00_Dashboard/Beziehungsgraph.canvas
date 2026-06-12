@@ -1,0 +1,10 @@
+{
+	"nodes":[
+		{"id":"title","type":"text","text":"# Beziehungsgraph\nFiguren + öffentliche/geheime Beziehungen. Figur-Notizen hierher ziehen, Kanten = Beziehung/Lüge.","x":-260,"y":-200,"width":420,"height":110},
+		{"id":"opfer","type":"file","file":"04_Figuren/Opfer-X.md","x":-200,"y":0,"width":250,"height":1220},
+		{"id":"verd","type":"file","file":"04_Figuren/Verdaechtige-A.md","x":220,"y":0,"width":250,"height":1560}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"verd","fromSide":"left","toNode":"opfer","toSide":"right","label":"connection"}
+	]
+}

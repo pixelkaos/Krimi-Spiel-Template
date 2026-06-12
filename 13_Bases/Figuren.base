@@ -1,0 +1,28 @@
+filters:
+  and:
+    - note.type == "figur"
+properties:
+  note.rolle:
+    displayName: Rolle
+  note.status:
+    displayName: Status
+  note.motiv:
+    displayName: Motiv
+  note.alibi:
+    displayName: Alibi
+  note.taeter:
+    displayName: Täter?
+  note.spoiler:
+    displayName: Spoiler
+views:
+  - type: table
+    name: Figuren
+    groupBy:
+      property: rolle
+      direction: ASC
+    order:
+      - file.name
+      - rolle
+      - status
+      - motiv
+      - alibi

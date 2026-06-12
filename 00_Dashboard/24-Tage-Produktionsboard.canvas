@@ -1,0 +1,12 @@
+{
+	"nodes":[
+		{"id":"title","type":"text","text":"# 24-Tage-Produktionsboard\nUmschläge durch die Spalten ziehen (Produktionsstatus).","x":-200,"y":-220,"width":420,"height":90},
+		{"id":"c1","type":"text","text":"## Idee","x":-600,"y":-80,"width":200,"height":60},
+		{"id":"c2","type":"text","text":"## Text","x":-360,"y":-80,"width":200,"height":60},
+		{"id":"c3","type":"text","text":"## Layout","x":-120,"y":-80,"width":200,"height":60},
+		{"id":"c4","type":"text","text":"## Druck","x":120,"y":-80,"width":200,"height":60},
+		{"id":"c5","type":"text","text":"## Gepackt","x":360,"y":-80,"width":200,"height":60},
+		{"id":"t01","type":"file","file":"08_Umschlaege/T01-Start.md","x":-610,"y":20,"width":220,"height":130}
+	],
+	"edges":[]
+}

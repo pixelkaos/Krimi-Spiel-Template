@@ -1,0 +1,57 @@
+{
+  "daily_time_budget": 3,
+  "final_envelope": "solution",
+  "critical_clues": ["C001", "C004"],
+  "envelopes": [
+    {
+      "id": "start",
+      "label": "Start packet",
+      "unlock_day": 1,
+      "time_cost": 0,
+      "entry_point": true,
+      "clues": ["C001"],
+      "leads_to": ["12-nw", "library"],
+      "critical": true
+    },
+    {
+      "id": "12-nw",
+      "label": "12 NW",
+      "unlock_day": 1,
+      "time_cost": 1,
+      "entry_point": false,
+      "clues": ["C002"],
+      "leads_to": ["31-ec"],
+      "critical": false
+    },
+    {
+      "id": "library",
+      "label": "Library",
+      "unlock_day": 1,
+      "time_cost": 1,
+      "entry_point": false,
+      "clues": ["C004"],
+      "leads_to": ["solution"],
+      "critical": true
+    },
+    {
+      "id": "31-ec",
+      "label": "31 EC",
+      "unlock_day": 2,
+      "time_cost": 1,
+      "entry_point": false,
+      "clues": ["C003"],
+      "leads_to": [],
+      "critical": false
+    },
+    {
+      "id": "solution",
+      "label": "Final accusation",
+      "unlock_day": 24,
+      "time_cost": 0,
+      "entry_point": false,
+      "clues": [],
+      "leads_to": [],
+      "critical": true
+    }
+  ]
+}

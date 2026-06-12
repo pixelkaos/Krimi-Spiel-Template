@@ -1,0 +1,37 @@
+# --- Schwere Build-Artefakte & große Binärdateien (NICHT syncen, iOS-Performance) ---
+/build/
+*.pdf
+*.psd
+*.ai
+*.zip
+*.mp4
+*.mov
+*.wav
+*.aiff
+
+# --- Obsidian: gerätespezifische / volatile Dateien ---
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+.trash/
+
+# --- Lokale KI-Indizes (gerätelokal am Mac, NICHT syncen) ---
+.smart-env/
+.smtcmp_vector_db.tar.gz
+**/.obsidian/plugins/smart-connections/.smart-env/
+
+# --- OS / Python ---
+.DS_Store
+__pycache__/
+*.pyc
+
+# --- Optionaler on-demand Qdrant-Storage (falls lokal genutzt) ---
+/qdrant_storage/
+
+# generierte Validator-Inputs
+/tools/generated/
+
+# Obsidian-Plugin-Code & key-haltige Plugin-Configs (gerätelokal, NICHT syncen)
+.obsidian/plugins/
+.obsidian/text-generator.json
+.smtcmp_json_db/

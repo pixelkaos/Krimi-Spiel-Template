@@ -1,0 +1,36 @@
+{
+  "primary_category": "suspect",
+  "categories": {
+    "suspect": ["Ada", "Bruno", "Clara"],
+    "location": ["Library", "Kitchen", "Garden"],
+    "object": ["Silver Key", "Blue Glass", "Red Thread"]
+  },
+  "solutions": {
+    "Ada": {
+      "location": "Library",
+      "object": "Silver Key"
+    },
+    "Bruno": {
+      "location": "Kitchen",
+      "object": "Blue Glass"
+    },
+    "Clara": {
+      "location": "Garden",
+      "object": "Red Thread"
+    }
+  },
+  "clues": [
+    {
+      "id": "C001",
+      "type": "positive",
+      "subject_category": "suspect",
+      "subject": "Ada",
+      "target_category": "location",
+      "target": "Library"
+    }
+  ],
+  "critical_solution": {
+    "culprit": "Ada",
+    "decisive_clues": ["C001"]
+  }
+}

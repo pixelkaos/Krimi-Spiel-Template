@@ -1,0 +1,51 @@
+name: Krimi-Spiel Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 5 * * *"   # Nightly-Tiefen-Audit 05:00 UTC
+
+permissions:
+  contents: read
+
+jobs:
+  vault-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      # --- Gating: Struktur & Konsistenz des Vaults ---
+      - name: Wikilinks prüfen
+        run: python3 tools/check_links.py
+
+      - name: Frontmatter-Schema prüfen
+        run: python3 tools/check_frontmatter.py
+
+      - name: Tag-Konsistenz prüfen
+        run: python3 tools/check_tags.py
+
+      - name: Verwaiste Notizen (informativ)
+        run: python3 tools/check_orphans.py
+
+      - name: Duplikate (informativ)
+        run: python3 tools/check_duplicates.py
+
+      # --- Gating: Logik-Engine smoke test (Codex-Validatoren gegen Beispiele) ---
+      - name: Truth-Map Beispiel
+        run: python3 tools/advent-crime-game-designer/scripts/validate_truth_map.py tools/advent-crime-game-designer/assets/templates/truth-map.example.json
+
+      - name: Timeline Beispiel
+        run: python3 tools/advent-crime-game-designer/scripts/validate_timeline.py tools/advent-crime-game-designer/assets/templates/timeline.example.json
+
+      # --- Informativ: echtes Umschlag-Manifest aus dem Vault (nicht gating, solange Fall im Aufbau) ---
+      - name: Umschlag-Manifest aus Vault erzeugen & prüfen
+        continue-on-error: true
+        run: |
+          python3 tools/frontmatter_to_validator_json.py envelopes
+          python3 tools/advent-crime-game-designer/scripts/validate_envelope_manifest.py tools/generated/envelope-manifest.json

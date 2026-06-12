@@ -1,0 +1,31 @@
+{
+  "events": [
+    {
+      "id": "E001",
+      "time": "1888-11-22T08:00",
+      "end_time": "1888-11-22T08:20",
+      "actors": ["Ada"],
+      "location": "Library",
+      "truth_status": "objective",
+      "revealed_in": ["Start"]
+    },
+    {
+      "id": "E002",
+      "time": "1888-11-22T08:30",
+      "end_time": "1888-11-22T08:45",
+      "actors": ["Bruno"],
+      "location": "Kitchen",
+      "truth_status": "claim",
+      "revealed_in": ["12 NW"]
+    },
+    {
+      "id": "E003",
+      "time": "1888-11-22T09:00",
+      "end_time": "1888-11-22T09:15",
+      "actors": ["Ada", "Clara"],
+      "location": "Garden",
+      "truth_status": "witnessed",
+      "revealed_in": ["31 EC"]
+    }
+  ]
+}

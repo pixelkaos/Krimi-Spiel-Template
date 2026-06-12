@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-05-22T09:55:21Z",
+  "plugin": {
+    "name": "advent-crime-game-designer",
+    "version": "0.1.0",
+    "description": "German-facing Codex plugin for designing analog crime and deduction Advent calendar games.",
+    "keywords": [
+      "advent-calendar",
+      "crime-game",
+      "deduction",
+      "story-generation",
+      "analog-game-design"
+    ]
+  },
+  "source_root": "/Users/pixelkaos/plugins/advent-crime-game-designer",
+  "source_files": [
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "sha256": "c7fc1fc45b4a420941809778343a911420484816c1b4c2242f0286c8825804e0",
+      "bytes": 3015,
+      "chunks": 4
+    },
+    {
+      "path": "skills/crime-case-architect/SKILL.md",
+      "kind": "skill",
+      "sha256": "9386b04735bdff88f0f8b5b635b5279c0ae4722962b2d45d189705619b1cedd2",
+      "bytes": 2416,
+      "chunks": 6
+    },
+    {
+      "path": "skills/deduction-consistency-auditor/SKILL.md",
+      "kind": "skill",
+      "sha256": "3b4f047578b1189f32c1a74df10a8e93bcdb8b82c125237b4af7c725189c5467",
+      "bytes": 2101,
+      "chunks": 6
+    },
+    {
+      "path": "skills/research-backed-story-planner/SKILL.md",
+      "kind": "skill",
+      "sha256": "cbfe8220ae45f2f64c8b88140e0338862dc92ed1f218c66bdb442fec8e5d28c9",
+      "bytes": 1981,
+      "chunks": 6
+    },
+    {
+      "path": "skills/sandbox-calendar-builder/SKILL.md",
+      "kind": "skill",
+      "sha256": "88bce188ec34aefcf9cad420db6b6aae833f9e94c76cd154709fdb267a18db3c",
+      "bytes": 1992,
+      "chunks": 6
+    },
+    {
+      "path": "references/advent-crime-design-guide.md",
+      "kind": "reference",
+      "sha256": "3f1904bfc5fc3492bd41ba18d1ff40555ad4e88c2be19d82e9182040261efd12",
+      "bytes": 2986,
+      "chunks": 11
+    },
+    {
+      "path": "references/research-method-cards.md",
+      "kind": "reference",
+      "sha256": "855932cc8c44c5c6b55c119626e716ae2e0eaacf44613c52ab43c31cd9042224",
+      "bytes": 4860,
+      "chunks": 11
+    },
+    {
+      "path": "references/source-index.md",
+      "kind": "reference",
+      "sha256": "322753e60d4b5d43dc9533361b03a79fcd47a412c88def862cce52f2e9499d79",
+      "bytes": 3936,
+      "chunks": 9
+    },
+    {
+      "path": "assets/templates/case-bible.template.md",
+      "kind": "template",
+      "sha256": "54cd567699354f7282236a2671a3c9d7b3552a10e21992a7debba41e3888e09b",
+      "bytes": 1157,
+      "chunks": 9
+    },
+    {
+      "path": "assets/templates/clue-ledger.template.md",
+      "kind": "template",
+      "sha256": "3bf46f16b24c1afc4a276fc7eb2de2752cc213d99ce2af9862ffc97a7cf7e0f9",
+      "bytes": 634,
+      "chunks": 3
+    },
+    {
+      "path": "assets/templates/moca-matrix.template.md",
+      "kind": "template",
+      "sha256": "0f4e54df45c077a8f0e08ac4aa2cd39a4af837797aafbae6a122426541247081",
+      "bytes": 476,
+      "chunks": 2
+    },
+    {
+      "path": "assets/templates/playtest-report.template.md",
+      "kind": "template",
+      "sha256": "2a8ac32268deac508751d6f78f44f4f8f5cabf19958baafb2d484f7cf1fddd63",
+      "bytes": 619,
+      "chunks": 6
+    },
+    {
+      "path": "assets/templates/envelope-manifest.example.json",
+      "kind": "template",
+      "sha256": "1de028079da37f2d95586580b81a3b069bc49943bbaaeb5f00a88b9fbd61c973",
+      "bytes": 1180,
+      "chunks": 1
+    },
+    {
+      "path": "assets/templates/timeline.example.json",
+      "kind": "template",
+      "sha256": "043905820e2d09064bb890ece6aa5f03a2f1e6e52dd2fc1436ab6327ff78946a",
+      "bytes": 701,
+      "chunks": 1
+    },
+    {
+      "path": "assets/templates/truth-map.example.json",
+      "kind": "template",
+      "sha256": "7097d8c3ba628d9893ec047d86bc4b4ceed32fc8a50119b02998663af11b75a3",
+      "bytes": 2102,
+      "chunks": 1
+    }
+  ],
+  "chunk_count": 82,
+  "outputs": [
+    "instructions.md",
+    "knowledge.md",
+    "chunks.jsonl",
+    "llms.txt",
+    "manifest.json"
+  ],
+  "embedding": {
+    "status": "embedded",
+    "provider": "ollama",
+    "model": "qwen3-embedding:latest",
+    "dimension": 4096,
+    "qdrant_url": "http://localhost:6333",
+    "qdrant_collection": "advent_crime_game_designer__qwen3_embedding",
+    "indexed_at": "2026-05-22T10:05:38Z"
+  }
+}

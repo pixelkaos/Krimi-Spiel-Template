@@ -1,0 +1,22 @@
+{
+  "events": [
+    {
+      "id": "E001",
+      "time": "1888-11-22T08:00",
+      "end_time": "1888-11-22T08:30",
+      "actors": ["Ada"],
+      "location": "Library",
+      "truth_status": "objective",
+      "revealed_in": ["Start"]
+    },
+    {
+      "id": "E002",
+      "time": "1888-11-22T08:15",
+      "end_time": "1888-11-22T08:45",
+      "actors": ["Ada"],
+      "location": "Garden",
+      "truth_status": "claim",
+      "revealed_in": ["12 NW"]
+    }
+  ]
+}

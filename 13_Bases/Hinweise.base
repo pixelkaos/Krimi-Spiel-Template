@@ -1,0 +1,29 @@
+filters:
+  and:
+    - 'note.type == "hinweis"'
+properties:
+  note.beweisart:
+    displayName: Beweisart
+  note.deduktionsfunktion:
+    displayName: Funktion
+  note.quelle_knoten:
+    displayName: Quelle/Knoten
+  note.pflicht:
+    displayName: Pflicht?
+  note.status:
+    displayName: Status
+  note.spoiler:
+    displayName: Spoiler
+views:
+  - type: table
+    name: Clue Ledger
+    order:
+      - file.name
+      - note.beweisart
+      - note.deduktionsfunktion
+      - note.quelle_knoten
+      - note.pflicht
+      - note.status
+    groupBy:
+      property: note.deduktionsfunktion
+      direction: ASC

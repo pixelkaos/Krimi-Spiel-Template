@@ -1,0 +1,12 @@
+{
+	"nodes":[
+		{"id":"title","type":"text","text":"# Clue-Dependency-Map\nUmschlag → Ort → Hinweis. Prüft Erreichbarkeit & Pflicht-Spine (vgl. validate_envelope_manifest).","x":-300,"y":-220,"width":460,"height":120},
+		{"id":"env","type":"file","file":"08_Umschlaege/T01-Start.md","x":-360,"y":0,"width":240,"height":140},
+		{"id":"ort","type":"file","file":"05_Orte/12-NW-Tatort.md","x":0,"y":0,"width":240,"height":140},
+		{"id":"clue","type":"file","file":"07_Hinweise/C001.md","x":360,"y":0,"width":240,"height":140}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"env","fromSide":"right","toNode":"ort","toSide":"left","label":"führt zu"},
+		{"id":"e2","fromNode":"ort","fromSide":"right","toNode":"clue","toSide":"left","label":"Beweis"}
+	]
+}

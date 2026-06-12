@@ -1,0 +1,92 @@
+{
+  "primary_category": "suspect",
+  "categories": {
+    "suspect": ["Ada", "Bruno", "Clara"],
+    "location": ["Library", "Kitchen", "Garden"],
+    "object": ["Silver Key", "Blue Glass", "Red Thread"]
+  },
+  "solutions": {
+    "Ada": {
+      "location": "Library",
+      "object": "Silver Key"
+    },
+    "Bruno": {
+      "location": "Kitchen",
+      "object": "Blue Glass"
+    },
+    "Clara": {
+      "location": "Garden",
+      "object": "Red Thread"
+    }
+  },
+  "clues": [
+    {
+      "id": "C001",
+      "type": "positive",
+      "subject_category": "suspect",
+      "subject": "Ada",
+      "target_category": "location",
+      "target": "Library",
+      "envelope": "Start"
+    },
+    {
+      "id": "C002",
+      "type": "negative",
+      "subject_category": "suspect",
+      "subject": "Bruno",
+      "target_category": "object",
+      "target": "Silver Key",
+      "envelope": "12 NW"
+    },
+    {
+      "id": "C003",
+      "type": "negative",
+      "subject_category": "suspect",
+      "subject": "Clara",
+      "target_category": "object",
+      "target": "Blue Glass",
+      "envelope": "31 EC"
+    },
+    {
+      "id": "C004",
+      "type": "negative",
+      "subject_category": "suspect",
+      "subject": "Ada",
+      "target_category": "object",
+      "target": "Blue Glass",
+      "envelope": "Library"
+    },
+    {
+      "id": "C005",
+      "type": "negative",
+      "subject_category": "suspect",
+      "subject": "Bruno",
+      "target_category": "location",
+      "target": "Garden",
+      "envelope": "Kitchen"
+    },
+    {
+      "id": "C006",
+      "type": "negative",
+      "subject_category": "suspect",
+      "subject": "Clara",
+      "target_category": "location",
+      "target": "Kitchen",
+      "envelope": "Garden"
+    },
+    {
+      "id": "C007",
+      "type": "positive",
+      "subject_category": "suspect",
+      "subject": "Clara",
+      "target_category": "object",
+      "target": "Red Thread",
+      "envelope": "31 EC"
+    }
+  ],
+  "critical_solution": {
+    "culprit": "Ada",
+    "method": "staged accident",
+    "decisive_clues": ["C001", "C004", "C007"]
+  }
+}

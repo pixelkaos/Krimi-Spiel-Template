@@ -1,0 +1,37 @@
+{
+  "daily_time_budget": 3,
+  "final_envelope": "solution",
+  "critical_clues": ["C001", "C999"],
+  "envelopes": [
+    {
+      "id": "start",
+      "label": "Start packet",
+      "unlock_day": 1,
+      "time_cost": 0,
+      "entry_point": true,
+      "clues": ["C001"],
+      "leads_to": [],
+      "critical": true
+    },
+    {
+      "id": "locked-room",
+      "label": "Locked Room",
+      "unlock_day": 2,
+      "time_cost": 1,
+      "entry_point": false,
+      "clues": ["C999"],
+      "leads_to": ["solution"],
+      "critical": true
+    },
+    {
+      "id": "solution",
+      "label": "Final accusation",
+      "unlock_day": 24,
+      "time_cost": 0,
+      "entry_point": false,
+      "clues": [],
+      "leads_to": [],
+      "critical": true
+    }
+  ]
+}

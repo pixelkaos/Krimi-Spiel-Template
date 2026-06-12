@@ -1,0 +1,38 @@
+filters:
+  and:
+    - 'note.type == "umschlag"'
+properties:
+  note.tag:
+    displayName: Tag
+  note.label:
+    displayName: Label
+  note.entry_point:
+    displayName: Start?
+  note.kritisch:
+    displayName: Kritisch?
+  note.zeitkosten:
+    displayName: Zeit
+  note.produktionsstatus:
+    displayName: Produktion
+  note.status:
+    displayName: Status
+views:
+  - type: table
+    name: Manifest (nach Tag)
+    order:
+      - note.tag
+      - note.label
+      - note.entry_point
+      - note.kritisch
+      - note.zeitkosten
+      - note.produktionsstatus
+  - type: table
+    name: Produktionsboard
+    order:
+      - note.tag
+      - note.label
+      - note.produktionsstatus
+      - note.status
+    groupBy:
+      property: note.produktionsstatus
+      direction: ASC

@@ -1,0 +1,16 @@
+{
+  "name": "advent-crime-game-designer",
+  "version": "0.1.0",
+  "description": "Design & QA für analoge Krimi-/Deduktions-Adventskalender (Closed-Circle, MOCA, Truth-Map, Sandbox-Umschläge). Skills + stdlib-Validatoren.",
+  "author": {
+    "name": "pixelkaos"
+  },
+  "license": "MIT",
+  "keywords": [
+    "advent-calendar",
+    "crime-game",
+    "deduction",
+    "story-generation",
+    "analog-game-design"
+  ]
+}

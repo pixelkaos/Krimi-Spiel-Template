@@ -1,0 +1,28 @@
+# Advent Crime Game Designer
+
+> Portable knowledge pack for analog crime and deduction Advent calendar design.
+
+## Core Files
+
+- [Instructions](instructions.md): Model-neutral behavior instructions.
+- [Knowledge](knowledge.md): Consolidated source knowledge for upload or paste.
+- [Chunks](chunks.jsonl): JSONL chunks for RAG ingestion.
+- [Manifest](manifest.json): Export metadata and source hashes.
+
+## Source Files
+
+- `README.md`
+- `skills/crime-case-architect/SKILL.md`
+- `skills/deduction-consistency-auditor/SKILL.md`
+- `skills/research-backed-story-planner/SKILL.md`
+- `skills/sandbox-calendar-builder/SKILL.md`
+- `references/advent-crime-design-guide.md`
+- `references/research-method-cards.md`
+- `references/source-index.md`
+- `assets/templates/case-bible.template.md`
+- `assets/templates/clue-ledger.template.md`
+- `assets/templates/moca-matrix.template.md`
+- `assets/templates/playtest-report.template.md`
+- `assets/templates/envelope-manifest.example.json`
+- `assets/templates/timeline.example.json`
+- `assets/templates/truth-map.example.json`
