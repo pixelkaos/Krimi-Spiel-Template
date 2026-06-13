@@ -69,7 +69,8 @@ Jede **Prosa**-Notiz markiert ihre Stimme im Frontmatter: `stimme: spielleiter |
 
 ## Logik-/QA-Layer (Codex) — vor „canonical" für Fall-Logik
 - **Skills:** `crime-case-architect`, `deduction-consistency-auditor`, `sandbox-calendar-builder`, `research-backed-story-planner`.
-- **Validatoren:** `tools/advent-crime-game-designer/scripts/validate_{truth_map,timeline,envelope_manifest}.py` + `tools/check_*.py`. **CI:** GitHub Actions (`.github/workflows/checks.yml`).
+- **Validatoren:** `tools/advent-crime-game-designer/scripts/validate_{truth_map,timeline,envelope_manifest}.py` + `tools/check_*.py`. **Lokal alles auf einmal:** `python3 tools/check_all.py` (oder `bash scripts/check.sh`). **CI:** GitHub Actions (`.github/workflows/checks.yml`).
+- **Maschineller Logik-Kern:** **Umschlag-Erreichbarkeit** (`frontmatter_to_validator_json.py envelopes`) + **Tat-Zeitleiste** (`… timeline`, ISO-Tabelle in `06_Zeitleisten`) + **`validate_exclusion.py`** (genau 1 Täter:in bleibt übrig, Ausschlüsse erreichbar; JSON z. B. vom `/deduction-consistency-auditor`) + Skill `/deduction-consistency-auditor`. `validate_truth_map` ist ein **Latin-Square**-Werkzeug (optional, **nicht** für 1-von-n-Einzeltäter geeignet).
 
 ## Drei-Schichten-Zusammenspiel
 **Logik** (Codex: Wahrheit/MOCA/Truth-Map/Erreichbarkeit) → **Prosa** (creative-writing: Umschlag-/Zeitungstext, Figurenstimmen, Kritik/Kontinuität) → **Workspace** (Obsidian + Git/CI). Reihenfolge im Zweifel: erst Logik fixieren, dann Prosa.

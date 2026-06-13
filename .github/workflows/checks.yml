@@ -43,9 +43,23 @@ jobs:
       - name: Timeline Beispiel
         run: python3 tools/advent-crime-game-designer/scripts/validate_timeline.py tools/advent-crime-game-designer/assets/templates/timeline.example.json
 
+      - name: Ausschluss Beispiel
+        run: python3 tools/advent-crime-game-designer/scripts/validate_exclusion.py tools/advent-crime-game-designer/assets/templates/exclusion.example.json
+
       # --- Informativ: echtes Umschlag-Manifest aus dem Vault (nicht gating, solange Fall im Aufbau) ---
       - name: Umschlag-Manifest aus Vault erzeugen & prüfen
         continue-on-error: true
         run: |
           python3 tools/frontmatter_to_validator_json.py envelopes
           python3 tools/advent-crime-game-designer/scripts/validate_envelope_manifest.py tools/generated/envelope-manifest.json
+
+      # --- Informativ: echte Tat-Zeitleiste aus dem Vault (leer, solange im Aufbau) ---
+      - name: Tat-Zeitleiste aus Vault erzeugen & prüfen
+        continue-on-error: true
+        run: |
+          python3 tools/frontmatter_to_validator_json.py timeline
+          if [ -f tools/generated/timeline.json ]; then
+            python3 tools/advent-crime-game-designer/scripts/validate_timeline.py tools/generated/timeline.json
+          else
+            echo "keine Tat-Zeitleiste (Tabelle leer) — übersprungen"
+          fi

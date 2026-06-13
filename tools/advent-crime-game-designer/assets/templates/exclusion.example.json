@@ -1,0 +1,9 @@
+{
+  "suspects": ["Ada", "Bruno", "Clara"],
+  "culprit": "Ada",
+  "exclusions": [
+    {"suspect": "Bruno", "clue": "C002", "reason": "Alibi: zur Tatzeit bezeugt im Garten"},
+    {"suspect": "Clara", "clue": "C003", "reason": "kein Zugang zum echten Tatort"}
+  ],
+  "reachable_clues": ["C001", "C002", "C003"]
+}

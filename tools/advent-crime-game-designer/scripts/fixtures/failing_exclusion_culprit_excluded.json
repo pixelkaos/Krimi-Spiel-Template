@@ -1,0 +1,9 @@
+{
+  "suspects": ["Ada", "Bruno", "Clara"],
+  "culprit": "Ada",
+  "exclusions": [
+    {"suspect": "Ada", "clue": "C009", "reason": "fälschlich ausgeschlossen"},
+    {"suspect": "Bruno", "clue": "C002", "reason": "Alibi bezeugt"},
+    {"suspect": "Clara", "clue": "C003", "reason": "kein Zugang"}
+  ]
+}

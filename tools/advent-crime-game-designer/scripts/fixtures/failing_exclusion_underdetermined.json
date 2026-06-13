@@ -1,0 +1,7 @@
+{
+  "suspects": ["Ada", "Bruno", "Clara"],
+  "culprit": "Ada",
+  "exclusions": [
+    {"suspect": "Bruno", "clue": "C002", "reason": "Alibi bezeugt"}
+  ]
+}
