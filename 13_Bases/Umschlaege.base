@@ -1,6 +1,8 @@
 filters:
   and:
     - 'note.type == "umschlag"'
+formulas:
+  clues_anzahl: 'clues.length'
 properties:
   note.tag:
     displayName: Tag
@@ -12,6 +14,8 @@ properties:
     displayName: Kritisch?
   note.zeitkosten:
     displayName: Zeit
+  formula.clues_anzahl:
+    displayName: Clues
   note.produktionsstatus:
     displayName: Produktion
   note.status:
@@ -25,14 +29,37 @@ views:
       - note.entry_point
       - note.kritisch
       - note.zeitkosten
+      - formula.clues_anzahl
       - note.produktionsstatus
   - type: table
-    name: Produktionsboard
+    name: Pacing
+    groupBy:
+      property: note.tag
+      direction: ASC
+    order:
+      - note.tag
+      - note.label
+      - note.zeitkosten
+      - formula.clues_anzahl
+    summaries:
+      note.zeitkosten: Sum
+  - type: table
+    name: Offen
+    filters:
+      and:
+        - 'note.produktionsstatus != "fertig"'
     order:
       - note.tag
       - note.label
       - note.produktionsstatus
       - note.status
+  - type: table
+    name: Produktionsboard
     groupBy:
       property: note.produktionsstatus
       direction: ASC
+    order:
+      - note.tag
+      - note.label
+      - note.produktionsstatus
+      - note.status

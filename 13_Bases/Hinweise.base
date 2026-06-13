@@ -1,6 +1,8 @@
 filters:
   and:
     - 'note.type == "hinweis"'
+formulas:
+  ohne_wahrheit: 'wahrheit.isEmpty()'
 properties:
   note.beweisart:
     displayName: Beweisart
@@ -14,9 +16,14 @@ properties:
     displayName: Status
   note.spoiler:
     displayName: Spoiler
+  formula.ohne_wahrheit:
+    displayName: "⚠ ohne Wahrheit"
 views:
   - type: table
     name: Clue Ledger
+    groupBy:
+      property: note.deduktionsfunktion
+      direction: ASC
     order:
       - file.name
       - note.beweisart
@@ -24,6 +31,24 @@ views:
       - note.quelle_knoten
       - note.pflicht
       - note.status
-    groupBy:
-      property: note.deduktionsfunktion
-      direction: ASC
+  - type: table
+    name: Player-safe
+    filters:
+      and:
+        - 'note.spoiler == "player-safe"'
+    order:
+      - file.name
+      - note.beweisart
+      - note.deduktionsfunktion
+      - note.quelle_knoten
+      - note.status
+  - type: table
+    name: Ohne Wahrheit
+    filters:
+      and:
+        - 'wahrheit.isEmpty()'
+    order:
+      - file.name
+      - note.deduktionsfunktion
+      - note.pflicht
+      - note.status

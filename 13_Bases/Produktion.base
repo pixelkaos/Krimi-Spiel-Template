@@ -1,0 +1,15 @@
+filters:
+  and:
+    - 'file.inFolder("09_Produktion")'
+properties:
+  note.status:
+    displayName: Status
+  note.produktionsstatus:
+    displayName: Produktion
+views:
+  - type: table
+    name: Produktionsboard
+    order:
+      - file.name
+      - note.status
+      - note.produktionsstatus

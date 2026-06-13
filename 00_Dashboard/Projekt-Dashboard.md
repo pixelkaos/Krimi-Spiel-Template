@@ -22,18 +22,10 @@ tags: [artifact/dashboard]
 - Zeitleisten: [[Tat-Zeitleiste]] · [[Ermittlungs-Zeitleiste]]
 
 ## KI-Drafts in Review (Inbox)
-```dataview
-TABLE status, source, file.mtime AS "geändert"
-FROM "11_Inbox"
-WHERE status = "draft"
-SORT file.mtime DESC
-```
+![[Inbox-Review.base]]
 
 ## Offene Hinweise ohne Wahrheit
-```dataview
-TABLE deduktionsfunktion, pflicht
-FROM "07_Hinweise"
-WHERE wahrheit = "" OR wahrheit = null
-```
+![[Hinweise.base#Ohne Wahrheit]]
 
-> Dataview-Blöcke zeigen Inhalte erst nach Installation des Dataview-Plugins (siehe `README.md` → Quick-Start).
+> Eingebettete **Bases** rendern in Obsidian ≥ 1.9 (Core-Plugin „Bases", aktiviert). Auf GitHub werden
+> Embeds nicht gerendert — nur die `.base`-Konfig liegt im Repo. Setup: `README.md` → Quick-Start.

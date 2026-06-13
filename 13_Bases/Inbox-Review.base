@@ -1,0 +1,17 @@
+filters:
+  and:
+    - 'file.inFolder("11_Inbox")'
+    - 'status == "draft"'
+properties:
+  note.status:
+    displayName: Status
+  note.source:
+    displayName: Quelle
+views:
+  - type: table
+    name: KI-Drafts in Review
+    order:
+      - file.name
+      - note.status
+      - note.source
+      - file.mtime

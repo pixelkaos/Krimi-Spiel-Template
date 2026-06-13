@@ -1,0 +1,36 @@
+filters:
+  and:
+    - 'note.type == "ort"'
+formulas:
+  beweise_anzahl: 'beweise.length'
+properties:
+  note.knoten_id:
+    displayName: Knoten
+  note.rolle:
+    displayName: Rolle
+  note.zeitkosten:
+    displayName: Zeit
+  note.unlock:
+    displayName: Unlock
+  formula.beweise_anzahl:
+    displayName: Beweise
+  note.produktionsstatus:
+    displayName: Produktion
+  note.status:
+    displayName: Status
+views:
+  - type: table
+    name: Knoten-Register
+    groupBy:
+      property: note.rolle
+      direction: ASC
+    order:
+      - note.knoten_id
+      - file.name
+      - note.rolle
+      - note.zeitkosten
+      - formula.beweise_anzahl
+      - note.produktionsstatus
+      - note.status
+    summaries:
+      note.zeitkosten: Sum

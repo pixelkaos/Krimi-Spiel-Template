@@ -1,0 +1,40 @@
+formulas:
+  betrifft_anzahl: 'betrifft.length'
+properties:
+  note.status:
+    displayName: Status
+  note.revision:
+    displayName: Rev
+  note.date:
+    displayName: Datum
+  note.spoiler:
+    displayName: Spoiler
+  note.schwere:
+    displayName: Schwere
+  note.testart:
+    displayName: Testart
+  formula.betrifft_anzahl:
+    displayName: Betrifft
+views:
+  - type: table
+    name: Audits
+    filters:
+      and:
+        - 'note.type == "audit"'
+    order:
+      - file.name
+      - note.revision
+      - note.status
+      - note.date
+      - note.spoiler
+  - type: table
+    name: Playtests
+    filters:
+      and:
+        - 'note.type == "playtest"'
+    order:
+      - file.name
+      - note.schwere
+      - note.testart
+      - note.status
+      - formula.betrifft_anzahl

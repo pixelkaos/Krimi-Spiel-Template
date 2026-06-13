@@ -1,6 +1,6 @@
 filters:
   and:
-    - note.type == "figur"
+    - 'note.type == "figur"'
 properties:
   note.rolle:
     displayName: Rolle
@@ -8,6 +8,8 @@ properties:
     displayName: Status
   note.motiv:
     displayName: Motiv
+  note.gelegenheit:
+    displayName: Gelegenheit
   note.alibi:
     displayName: Alibi
   note.taeter:
@@ -18,11 +20,23 @@ views:
   - type: table
     name: Figuren
     groupBy:
-      property: rolle
+      property: note.rolle
       direction: ASC
     order:
       - file.name
-      - rolle
-      - status
-      - motiv
-      - alibi
+      - note.rolle
+      - note.status
+      - note.motiv
+      - note.alibi
+  - type: table
+    name: Verdächtige
+    filters:
+      and:
+        - 'note.rolle == "verdaechtige"'
+    order:
+      - file.name
+      - note.motiv
+      - note.gelegenheit
+      - note.alibi
+      - note.taeter
+      - note.spoiler
