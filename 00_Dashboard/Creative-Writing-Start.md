@@ -35,11 +35,11 @@ Bevor Text geschrieben wird, die **Fallwahrheit** festlegen:
 - Iterieren, bis es sitzt.
 
 ## 5. Logik-Gegencheck (vor „canonical")
-- **`/deduction-consistency-auditor`** + Validatoren:
+- **`/deduction-consistency-auditor`** + Validatoren — am einfachsten alles auf einmal:
 ```bash
-python3 tools/frontmatter_to_validator_json.py envelopes
-python3 tools/advent-crime-game-designer/scripts/validate_truth_map.py <truth-map.json>
+python3 tools/check_all.py   # Frontmatter/Links/Tags + Umschlag-Erreichbarkeit + Tat-Zeitleiste + Logik-Beispiele
 ```
+  Einzelschritte (Zeitleiste, `validate_exclusion` für den Einzeltäter): siehe [[Validation-Check-Promotion]].
 - Regel: Eine Prosa-Änderung darf **nie** die Clue-Semantik ändern, ohne diese Checks erneut laufen zu lassen.
 
 ## 6. Promotion (Entwurf → Kanon)
